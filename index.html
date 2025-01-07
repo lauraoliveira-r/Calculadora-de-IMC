@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!--Favicon--> 
+    <link rel="icon" href="Logo.jpg" type="image/jpg">
+    <title>Calculadora de IMC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200vh;
+            margin: 0;
+            background-color: #1c4d2b;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .btn-calculadora {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-calculadora:hover {
+            background-color: #45a049;
+        }
+        .input-field {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="Logo.jpg" alt="Logo da Calculadora de IMC" class="logo"> <!-- Caminho da imagem -->
+        <h1>Bem-vindo à Calculadora de IMC</h1>
+        <p>O Índice de Massa Corporal (IMC) é uma medida usada para avaliar se uma pessoa está dentro de um peso saudável em relação à sua altura. Ele é calculado dividindo o peso pela altura ao quadrado.</p>
+        <p>Este sistema permite registrar e acompanhar seu peso e IMC, ajudando você a monitorar o progresso e a manter um estilo de vida saudável.</p>
+
+        <input type="text" id="nome" placeholder="Nome" class="input-field" required>
+        <input type="date" id="dataDeMonitoramento" class="input-field" required> <!-- Campo de data -->
+        <input type="number" id="peso" placeholder="Peso (kg)" class="input-field" required>
+        <input type="number" id="altura" placeholder="Altura (m)" step="0.01" class="input-field" required>
+        
+        <button class="btn-calculadora" onclick="cadastrarUsuario()">Calcular e Cadastrar</button>
+        <button class="btn-calculadora" onclick="limparCampos()">Limpar</button> <!-- Botão de limpar -->
+
+        <div id="resultado"></div>
+        <div id="listaUsuarios"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Incluindo o script JS aqui -->
+</body>
+</html>
